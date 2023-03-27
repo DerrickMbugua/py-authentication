@@ -89,7 +89,12 @@ def login():
 @login_required
 def dashboard():
     return render_template('dashboard.html')
-  
+
+@app.route('/logout', methods=['GET', 'POST'])
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login')) 
   
 @app.route('/register', methods=['GET', 'POST'])
 def register():
