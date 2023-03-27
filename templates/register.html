@@ -10,7 +10,19 @@
 
 <body>
     <h1>Register Page</h1>
-
+ <!--    <form method="post">
+      <label for="username">Username</label>
+      <input name="username" id="username" required>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+      <input type="submit" value="Register">
+    </form>-->
+    <form method="POST" action="">
+   
+      {{ form.username }}
+      {{ form.password }}
+      {{ form.submit }}
+  </form>
     <a href="{{ url_for('login') }}">Already have an account? Log In</a>
 </body>
 
